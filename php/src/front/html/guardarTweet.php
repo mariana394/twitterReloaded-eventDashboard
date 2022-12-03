@@ -12,5 +12,5 @@
     $query = "INSERT INTO Events (username, type_interaction, timestamp, id_tweet) VALUES(\"$username\", 1, now(), \"$id\")";
     $result = consultaBaseDatos($query);
 
-    header("Location:./crearTweet.php");
+    header("Location:./principal.php");
 ?>

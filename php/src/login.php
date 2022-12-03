@@ -22,7 +22,7 @@
         $queryE = "INSERT INTO `Events`( `username`, `type_interaction`, `timestamp`) VALUES (\"$username\",0,now())";
         $result = consultaBaseDatos($queryE);
         
-        header("Location:../front/html/principal.html");
+        header("Location:../front/html/principal.php");
 
     }
 
