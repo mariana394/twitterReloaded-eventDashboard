@@ -9,9 +9,15 @@
 
     $result = consultaBaseDatos($query);
 
-    while($row = mysqli_fetch_array($result)) {
-        $user = $row['username'];
-        $events_number = $row['n'];
+    if (mysqli_num_rows($result) != 0) {
+
+        while($row = mysqli_fetch_array($result)) {
+            $user = $row['username'];
+            $events_number = $row['n'];
+        }
+    }else{
+        $user = "";
+        $events_number = 0;
     }
 
     $query = "select e.id_tweet, t.description, count(*) as n
@@ -23,9 +29,15 @@
 
     $result = consultaBaseDatos($query);
 
-    while($row = mysqli_fetch_array($result)) {
-        $tweet = $row['n'];
-        $tweet_description = $row['description'];
+    if (mysqli_num_rows($result) != 0) {
+
+        while($row = mysqli_fetch_array($result)) {
+            $tweet = $row['n'];
+            $tweet_description = $row['description'];
+        }
+    } else{
+        $tweet = 0;
+        $tweet_description = "";
     }
 
     $query = "select COUNT(DISTINCT (e.username)) as count
@@ -38,13 +50,6 @@
     while($row = mysqli_fetch_array($result)) {
         $num_users = $row['count'];
     }
-
-    // echo $num_users;
-
-    // echo $tweet;
-
-    // echo $user;
-
 
     echo '<div class="py-3 d-flex align-items-center">
     <span class="btn btn-warning btn-circle d-flex align-items-center">

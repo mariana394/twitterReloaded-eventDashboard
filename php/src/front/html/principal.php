@@ -178,8 +178,7 @@
                                 <!-- Comment Row -->
                                 <?php
                                     require('get_tweets.php');
-                                    vista_principal()
-
+                                    vista_principal();
                                 ?>
                             </div>
                         </div>

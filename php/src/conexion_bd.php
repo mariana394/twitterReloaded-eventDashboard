@@ -5,7 +5,6 @@ function consultaBaseDatos($consulta){
     if($resultado){
         return $resultado;
     }else{
-        echo "al";
         return FALSE;
     }
     mysqli_close($conexion);

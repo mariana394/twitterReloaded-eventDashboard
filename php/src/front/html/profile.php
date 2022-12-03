@@ -171,7 +171,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <form class="form-horizontal form-material mx-2">
-                            
+                                    
+                                   <?php
+                                   include("profile_info.php");
+                                   ?>
                                    
                                 </form>
                             </div>
@@ -179,22 +182,7 @@
                     </div>
                     <!-- Column -->
                      <!-- Column -->
-                     <div class="col-lg-8 col-xlg-9 col-md-7">
-                        <div class="card">
-                            <div class="card-body">
-                                <form class="form-horizontal form-material mx-2">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Tweets</label>
-                                        <?php
-                                    require('get_tweets.php');
-                                    vista_profile()
 
-                                ?>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <!-- Row -->
                 <!-- ============================================================== -->
